@@ -1,0 +1,121 @@
+Resources:
+  MwaaAtRestEncryptionEnabledCheck:
+    Type: AWS::Config::ConfigRule
+    Description: ${mwaa_at_rest_encryption_enabled_check_rule_description}
+    Properties:
+      ConfigRuleName: ${mwaa_at_rest_encryption_enabled_check_rule_name}
+      MaximumExecutionFrequency: Twelve_Hours
+      Scope:
+        ComplianceResourceTypes:
+          - AWS::::Account
+      Source:
+        Owner: CUSTOM_LAMBDA
+        SourceDetails:
+          - EventSource: aws.config
+            MessageType: ScheduledNotification
+        SourceIdentifier: ${mwaa_at_rest_encryption_enabled_check_lambda_function_arn}
+  MwaaWebserverPublicAccessEnabledCheck:
+    Type: AWS::Config::ConfigRule
+    Description: ${mwaa_webserver_public_access_enabled_check_rule_description}
+    Properties:
+      ConfigRuleName: ${mwaa_webserver_public_access_enabled_check_rule_name}
+      MaximumExecutionFrequency: Twelve_Hours
+      Scope:
+        ComplianceResourceTypes:
+          - AWS::::Account
+      Source:
+        Owner: CUSTOM_LAMBDA
+        SourceDetails:
+          - EventSource: aws.config
+            MessageType: ScheduledNotification
+        SourceIdentifier: ${mwaa_webserver_public_access_enabled_check_lambda_function_arn}
+  MwaaDagProcessingLogsEnabledCheck:
+    Type: AWS::Config::ConfigRule
+    Description: ${mwaa_dag_processing_logs_enabled_check_rule_description}
+    Properties:
+      ConfigRuleName: ${mwaa_dag_processing_logs_enabled_check_rule_name}
+      MaximumExecutionFrequency: Twelve_Hours
+      Scope:
+        ComplianceResourceTypes:
+          - AWS::::Account
+      Source:
+        Owner: CUSTOM_LAMBDA
+        SourceDetails:
+          - EventSource: aws.config
+            MessageType: ScheduledNotification
+        SourceIdentifier: ${mwaa_dag_processing_logs_enabled_check_lambda_function_arn}
+  MwaaSchedulerLogsEnabledCheck:
+    Type: AWS::Config::ConfigRule
+    Description: ${mwaa_scheduler_logs_enabled_check_rule_description}
+    Properties:
+      ConfigRuleName: ${mwaa_scheduler_logs_enabled_check_rule_name}
+      MaximumExecutionFrequency: Twelve_Hours
+      Scope:
+        ComplianceResourceTypes:
+          - AWS::::Account
+      Source:
+        Owner: CUSTOM_LAMBDA
+        SourceDetails:
+          - EventSource: aws.config
+            MessageType: ScheduledNotification
+        SourceIdentifier: ${mwaa_scheduler_logs_enabled_check_lambda_function_arn}
+  MwaaTaskLogsEnabledCheck:
+    Type: AWS::Config::ConfigRule
+    Description: ${mwaa_task_logs_enabled_check_rule_description}
+    Properties:
+      ConfigRuleName: ${mwaa_task_logs_enabled_check_rule_name}
+      MaximumExecutionFrequency: Twelve_Hours
+      Scope:
+        ComplianceResourceTypes:
+          - AWS::::Account
+      Source:
+        Owner: CUSTOM_LAMBDA
+        SourceDetails:
+          - EventSource: aws.config
+            MessageType: ScheduledNotification
+        SourceIdentifier: ${mwaa_task_logs_enabled_check_lambda_function_arn}
+  MwaaWebserverLogsEnabledCheck:
+    Type: AWS::Config::ConfigRule
+    Description: ${mwaa_webserver_logs_enabled_check_rule_description}
+    Properties:
+      ConfigRuleName: ${mwaa_webserver_logs_enabled_check_rule_name}
+      MaximumExecutionFrequency: Twelve_Hours
+      Scope:
+        ComplianceResourceTypes:
+          - AWS::::Account
+      Source:
+        Owner: CUSTOM_LAMBDA
+        SourceDetails:
+          - EventSource: aws.config
+            MessageType: ScheduledNotification
+        SourceIdentifier: ${mwaa_webserver_logs_enabled_check_lambda_function_arn}
+  MwaaWorkerLogsEnabledCheck:
+    Type: AWS::Config::ConfigRule
+    Description: ${mwaa_worker_logs_enabled_check_rule_description}
+    Properties:
+      ConfigRuleName: ${mwaa_worker_logs_enabled_check_rule_name}
+      MaximumExecutionFrequency: Twelve_Hours
+      Scope:
+        ComplianceResourceTypes:
+          - AWS::::Account
+      Source:
+        Owner: CUSTOM_LAMBDA
+        SourceDetails:
+          - EventSource: aws.config
+            MessageType: ScheduledNotification
+        SourceIdentifier: ${mwaa_worker_logs_enabled_check_lambda_function_arn}
+  MwaaCustomManagedEndpointEnabledCheck:
+    Type: AWS::Config::ConfigRule
+    Description: ${mwaa_customer_managed_endpoint_enabled_check_rule_description}
+    Properties:
+      ConfigRuleName: ${mwaa_customer_managed_endpoint_enabled_check_rule_name}
+      MaximumExecutionFrequency: Twelve_Hours
+      Scope:
+        ComplianceResourceTypes:
+          - AWS::::Account
+      Source:
+        Owner: CUSTOM_LAMBDA
+        SourceDetails:
+          - EventSource: aws.config
+            MessageType: ScheduledNotification
+        SourceIdentifier: ${mwaa_customer_managed_endpoint_enabled_check_lambda_function_arn}
