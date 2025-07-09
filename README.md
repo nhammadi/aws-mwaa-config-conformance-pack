@@ -12,7 +12,7 @@ This Conformance Pack defines a set of custom AWS Config rules targeting MWAA en
 
 | Rule Name | Description |
 |----------|-------------|
-| `mwaa-at-rest-encryption-enabled-check` | Checks if Amazon MWAA environments have encryption at rest enabled using AWS KMS. |
+| `mwaa-at-rest-encryption-enabled-check` | Checks if Amazon MWAA environments have encryption at rest enabled using AWS KMS CMK. |
 | `mwaa-webserver-public-access-enabled-check` | Checks if the MWAA webserver is publicly accessible. |
 | `mwaa-dag-processing-logs-enabled-check` | Ensures that DAG Processing logs are enabled. |
 | `mwaa-scheduler-logs-enabled-check` | Ensures that Scheduler logs are enabled. |

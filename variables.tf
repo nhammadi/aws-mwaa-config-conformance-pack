@@ -24,6 +24,5 @@ variable "cloudwatch_logs_retention_in_days" {
 
 variable "config_rules_cross_account_role_name" {
   type        = string
-  default     = "custom-config-rules-role"
   description = "IAM role name deployed in each account to allow AWS config to check resources compliances and put evaluations results."
 }
